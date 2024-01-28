@@ -1,0 +1,119 @@
+.image-generator{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    gap: 30px;
+    padding: 90px;
+}
+
+.header{
+    color: rgb(200,200,200);
+    font-size: 30px;
+    font-weight: 500;
+    padding-bottom: 15px;
+    text-align: center;
+}
+
+.image-loading img{
+    height: 400px;
+    width: auto;
+}
+
+.search-box{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 700px;
+    height: 60px;
+    margin-top: 30px;
+    border-radius: 5px;
+    background: #1f3540;
+}
+
+.search-input, .search-input-error{
+    width: 600px;
+    height: 50px;
+    border: none;
+    background: transparent;
+    order: none;
+    outline: none;
+    font-size: 16px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-right: 50px;
+    color: #999;
+}
+
+.search-input-error::placeholder{
+    font-weight: 500;
+    color: rgb(214, 79, 51);
+}
+
+.search-input::placeholder{
+    color: #999;
+}
+
+.yes-no-btns{
+    display: flex;
+    flex-direction: row;
+    gap: 24vw;
+    margin-top: 3.7vh;
+}
+
+.generate-btn, .modify-btn, .yes-btn, .no-btn, .continue-btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 180px;
+    height: 60px;
+    font-size: 20px;
+    border-radius: 5px;
+    background: rgb(214, 79, 51);
+    cursor: pointer;
+}
+
+/* instructions */
+
+.instructions {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 70px;
+    text-align: center;
+    padding: 180px;
+}
+
+.welcome-msg{
+    color: rgb(200,200,200);
+    font-size: 40px;
+    font-weight: 500;
+}
+
+.message{
+    padding-left: 130px;
+    padding-right: 130px;
+}
+
+.study-name{
+    color: rgb(214, 79, 51);
+}
+
+/* Thank you */
+
+.last-page{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 30px;
+    font-weight: 500;
+    height: 95vh;
+}
+
+.thank-you{
+    color: rgb(214, 79, 51);
+}
