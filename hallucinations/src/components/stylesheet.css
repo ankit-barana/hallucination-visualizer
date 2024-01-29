@@ -16,6 +16,10 @@
     text-align: center;
 }
 
+.image-loading {
+    position: relative;
+  }
+
 .image-loading img{
     height: 400px;
     width: auto;
@@ -74,8 +78,33 @@
     cursor: pointer;
 }
 
-/* instructions */
+/* mask geenrator / image editor */
 
+#sizeSlider {
+    width: 80%;
+    margin: 0 10px;
+}
+  
+#sizeSlider::-ms-thumb{
+    color: rgb(214, 79, 51);
+}
+  
+.circle{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    background-color: rgba(255, 255, 255, 0.528);
+    border: 2px solid white;
+}
+  
+#myButton{
+    background-color: rgb(214, 79, 51);
+    color: white;
+}
+
+/* instructions */
 .instructions {
     display: flex;
     flex-direction: column;

@@ -5,9 +5,9 @@ const sharp = require("sharp");
 require('dotenv').config();
 
 const openai = new OpenAI({
-    apiKey: "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",
+    apiKey: "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",
 });
-
+ 
 let numGen = 1; // nth number of image-generation
 let numMod = 1; // nth number of modification of given generation
 let imageName = ""; // intializes image name 
@@ -60,7 +60,7 @@ const generateImage = async (req, res) => {
 const modifyImage = async (req, res) => {
     try {
         const response = await openai.images.edit({
-            image: fs.createReadStream('./images/image2mod2.png'),
+            image: fs.createReadStream('./images/image1.png'),
             mask: fs.createReadStream('./images/transparent.png'),
             prompt: req.body.description,
             n: 1,

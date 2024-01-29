@@ -11,11 +11,14 @@ const ImageGenerator = ({onNoClick}) => {
     const [loading, setLoading] = useState(false);
     const [isInputEmpty, setIsInputEmpty] = useState(false);
     const [imageURL, setImageURL] = useState("");
+    // masker const
+    // currentMask const
     let inputRef = useRef(null);
 
     const handleYesClick = () => {
         setShowYesNoBtns(false);
         setShowSearchBox(true);
+        // set the current image to false, and set mask to true
     };
 
     // generates image
@@ -59,11 +62,12 @@ const ImageGenerator = ({onNoClick}) => {
             console.log(err);
         }
 
+        // set mask to false and currentimage to true
         setShowYesNoBtns(true)
         setShowSearchBox(false)
         setLoading(false)
     }
-
+ 
     return (
         <div className='image-generator'>
             <div className='header'>
@@ -86,7 +90,7 @@ const ImageGenerator = ({onNoClick}) => {
                         <input type="text" ref={inputRef} className="search-input" placeholder='describe what you want to make' />
                     )}
                     {isFirstIteration ? (
-                        <div className="generate-btn" onClick={modifyImage}>
+                        <div className="generate-btn" onClick={generateImage}>
                             {loading ? 'Generating' : 'Generate'}
                         </div>
                     ) : (
