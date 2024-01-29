@@ -60,7 +60,7 @@ const generateImage = async (req, res) => {
 const modifyImage = async (req, res) => {
     try {
         const response = await openai.images.edit({
-            image: fs.createReadStream('./images/image1.png'),
+            image: fs.createReadStream(1`./images/${imageName}`), // call imageName to refer to the latest file
             mask: fs.createReadStream('./images/transparent.png'),
             prompt: req.body.description,
             n: 1,
